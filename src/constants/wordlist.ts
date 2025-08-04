@@ -22,7 +22,7 @@ export const WORDS = [
   'qanun', 'sevda', 'şarap', 'teatr', 'uyğun', 'yiber', 'zayıf', 'zorla',
   
   // Базові слова
-  'arası', 'berdi', 'birde', 'bütin', 'dört', 'elli', 'gelen', 'getti',
+  'arası', 'berdi', 'birde', 'bütin', 'gelen', 'getti',
   'ibler', 'kirdi', 'olsun', 'söyle', 'turma', 'vaqıt', 'yaxşı', 'çalış'
 ];
 

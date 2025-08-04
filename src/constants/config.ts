@@ -3,12 +3,32 @@
 export const CONFIG = {
   // 🔤 Кількість спроб
   tries: 6,
+
+  // 📅 Дата початку гри
+  startDate: 'January 1, 2024 00:00:00',
+
+  // 📊 Google Analytics ID (порожній, якщо не використовується)
+  googleAnalytics: '',
+
+  // 🌐 Назва мови
+  language: 'Qırımtatarca',
+
+  // 👤 Автор та джерела
+  author: "QIRI'M Young",
+  authorWebsite: 'https://ctcorpus.org',
+  wordListSource: 'Qırımtatar Milliy Korpusu',
+  wordListSourceLink: 'https://ctcorpus.org',
+
+  // 🔀 Розширені налаштування
+  shuffle: false,
   
   // 📱 Локалізація
   locale: 'crh',
   
   // 🌍 Доступні мови
   availableLangs: ['crh', 'en'],
+  defaultLang: 'crh',
+  escapeSpecialCharacters: true,
   
   // 🎨 Кольорова палітра для кримськотатарської Wordle
   colors: {
