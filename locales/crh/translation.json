@@ -1,0 +1,32 @@
+{
+  "about": "Oyun aqqında",
+  "gameName": "Söz tapuv oyunı - {{language}}",
+  "enterKey": "Kirmek",
+  "deleteKey": "Silmek",
+  "notEnoughLetters": "Arif yeterli degil",
+  "wordNotFound": "Söz tapılmadı",
+  "solution": "Söz {{solution}} edi",
+  "gameCopied": "Oyun kopyalandı",
+  "howToPlay": "Nasıl oynamaq kerek",
+  "instructions": "{{tries}} deneme içinde sözni tapıñız. Er denemeден soñ, renk qareleri sizniñ tapqan sözüñiz doğru sözge ne qadar yaqın ekenini kösterе.",
+  "examples": "Misal:",
+  "correctSpotInstructions": "Arif doğru yerde",
+  "wrongSpotInstructions": "Arif sözde bar, amma başqa yerde", 
+  "notInWordInstructions": "Arif sözde yoq",
+  "pickYourLanguage": "Til saylañız",
+  "statistics": "Statistika",
+  "totalTries": "Umumiy denemeler",
+  "successRate": "Muvafaqiyet derecesi",
+  "currentStreak": "Şimdiki seriya",
+  "bestStreak": "Eñ yahşı seriya",
+  "newWordCountdown": "Yañı söz",
+  "share": "Paylaşmaq",
+  "winMessages": ["Pek güzel!", "Aferim!", "Yahşı yapıldı!", "Mükemmel!", "Fevqalade!"],
+  "languages": {
+    "en": "English",
+    "es": "Español", 
+    "sw": "Kiswahili",
+    "zh": "中文",
+    "crh": "Qırımtatarca"
+  }
+}
