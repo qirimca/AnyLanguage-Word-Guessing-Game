@@ -59,7 +59,7 @@ if (Test-Path $configPath) {
         
         Set-Content -Path $configPath -Value $newConfigContent -Encoding UTF8
         Write-Host "✅ Додано normalization: 'NFC' до config.ts" -ForegroundColor Green
-        Write-Host "   📝 Це важливо для правильної роботи з літерами: ı, ğ, ü, ñ, ş, ö, ç, ä" -ForegroundColor Yellow
+        Write-Host "   📝 Це важливо для правильної роботи з літерами: ı, ğ, ü, ñ, ş, ö, ç" -ForegroundColor Yellow
     } else {
         Write-Host "✅ Unicode нормалізація вже присутня в config.ts" -ForegroundColor Green
     }
@@ -156,7 +156,7 @@ try {
 
 - Додано .nojekyll файли для коректної роботи GitHub Pages з React
 - Відновлено CONFIG.normalization: 'NFC' для кримськотатарських літер
-- Виправлено підтримку спеціальних символів: ı, ğ, ü, ñ, ş, ö, ç, ä"
+- Виправлено підтримку спеціальних символів: ı, ğ, ü, ñ, ş, ö, ç"
 
     Write-Host "✅ Зміни закомічено!" -ForegroundColor Green
     

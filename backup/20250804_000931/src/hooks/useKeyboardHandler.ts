@@ -13,8 +13,7 @@ const CRIMEAN_TATAR_KEY_MAP: Record<string, string> = {
   // Кримськотатарські спеціальні літери з альтернативними способами введення
   'ı': 'ı', 'i': 'i',           // ı (dotless i) та звичайна i
   'ğ': 'ğ', 'ü': 'ü', 'ñ': 'ñ', // Основні діакритичні літери
-  'ş': 'ş', 'ö': 'ö', 'ç': 'ç',  // Інші спеціальні літери
-  'ä': 'ä',                      // ä
+  'ş': 'ş', 'ö': 'ö', 'ç': 'ç', 'â': 'â',  // Інші спеціальні літери
   
   // Альтернативні способи введення через композитні клавіші
   'АltLeft+i': 'ı',             // Alt+i для ı
@@ -24,7 +23,7 @@ const CRIMEAN_TATAR_KEY_MAP: Record<string, string> = {
   'AltLeft+s': 'ş',             // Alt+s для ş
   'AltLeft+o': 'ö',             // Alt+o для ö
   'AltLeft+c': 'ç',             // Alt+c для ç
-  'AltLeft+a': 'ä',             // Alt+a для ä
+  'AltLeft+a': 'â',             // Alt+a для â
 }
 
 // 🎯 Тип для обробника клавіш
@@ -102,7 +101,7 @@ export const useKeyboardHandler = ({
 // ✅ Перевірка чи є літера валідною для кримськотатарської мови
 const isValidCrimeanTatarLetter = (letter: string): boolean => {
   // Кримськотатарський алфавіт
-  const crimeanTatarAlphabet = 'abcçdefgğhıijklmnñopqrsştuüvwxyz'
+  const crimeanTatarAlphabet = 'aâbcçdefgğhıijklmnñopqrsştuüvwxyz'
   const normalizedLetter = normalizeLetter(letter)
   
   return crimeanTatarAlphabet.includes(normalizedLetter) && letter.length === 1
@@ -126,7 +125,7 @@ export const KeyboardHints: React.FC = () => {
             <li><code>Alt + s</code> → ş</li>
             <li><code>Alt + o</code> → ö</li>
             <li><code>Alt + c</code> → ç</li>
-            <li><code>Alt + a</code> → ä</li>
+            <li><code>Alt + a</code> → â</li>
           </ul>
         </div>
         <div className="keyboard-hints__section">

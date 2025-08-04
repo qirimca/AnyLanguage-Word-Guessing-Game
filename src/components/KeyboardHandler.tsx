@@ -28,13 +28,13 @@ const CRIMEAN_TATAR_KEY_MAPPING: { [key: string]: string } = {
   // Комбінації клавіш для спеціальних символів
   // Alt+G для ğ, Alt+U для ü, тощо
   'Alt+g': 'ğ',
-  'Alt+u': 'ü', 
+  'Alt+u': 'ü',
   'Alt+n': 'ñ',
   'Alt+s': 'ş',
   'Alt+o': 'ö',
   'Alt+c': 'ç',
-  'Alt+a': 'ä',
-  
+  'Alt+a': 'â',
+
   // Також підтримуємо варіанти з AltGr
   'AltGraph+g': 'ğ',
   'AltGraph+u': 'ü',
@@ -42,8 +42,8 @@ const CRIMEAN_TATAR_KEY_MAPPING: { [key: string]: string } = {
   'AltGraph+s': 'ş',
   'AltGraph+o': 'ö',
   'AltGraph+c': 'ç',
-  'AltGraph+a': 'ä',
-  
+  'AltGraph+a': 'â',
+
   // Варіанти з Shift+Alt
   'Shift+Alt+g': 'ğ',
   'Shift+Alt+u': 'ü',
@@ -51,7 +51,7 @@ const CRIMEAN_TATAR_KEY_MAPPING: { [key: string]: string } = {
   'Shift+Alt+s': 'ş',
   'Shift+Alt+o': 'ö',
   'Shift+Alt+c': 'ç',
-  'Shift+Alt+a': 'ä',
+  'Shift+Alt+a': 'â',
   'Shift+Alt+i': 'ı', // dotless i
 }
 
@@ -190,6 +190,7 @@ export const KeyboardInstructions: React.FC = () => {
         <div>
           <h4 className="font-semibold mb-2">🔣 Спеціальні літери:</h4>
           <ul className="space-y-1">
+            <li><code className="bg-gray-200 px-1 rounded">Alt + a</code> → <strong>â</strong></li>
             <li><code className="bg-gray-200 px-1 rounded">Alt + i</code> → <strong>ı</strong> (dotless i)</li>
             <li><code className="bg-gray-200 px-1 rounded">Alt + g</code> → <strong>ğ</strong></li>
             <li><code className="bg-gray-200 px-1 rounded">Alt + u</code> → <strong>ü</strong></li>
@@ -197,7 +198,6 @@ export const KeyboardInstructions: React.FC = () => {
             <li><code className="bg-gray-200 px-1 rounded">Alt + s</code> → <strong>ş</strong></li>
             <li><code className="bg-gray-200 px-1 rounded">Alt + o</code> → <strong>ö</strong></li>
             <li><code className="bg-gray-200 px-1 rounded">Alt + c</code> → <strong>ç</strong></li>
-            <li><code className="bg-gray-200 px-1 rounded">Alt + a</code> → <strong>ä</strong></li>
           </ul>
         </div>
       </div>

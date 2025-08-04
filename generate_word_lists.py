@@ -179,7 +179,7 @@ def main() -> None:
     os.makedirs(args.out_dir, exist_ok=True)
 
     # Build regex for valid characters (modify as needed for your alphabet)
-    alphabet_chars = "a-zğışçñöüáàâäéèêëíìîïóòôöúùûü"
+    alphabet_chars = "a-zğışçñöüáàâéèêëíìîïóòôöúùûü"
     valid_pattern = re.compile(f"^[{alphabet_chars}]+$", re.IGNORECASE)
 
     print("Loading POS dictionary...", file=sys.stderr)
