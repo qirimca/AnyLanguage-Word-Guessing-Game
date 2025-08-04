@@ -18,3 +18,6 @@ export const KEYBOARD_ROWS = [
   ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'ş', 'i'],
   ['z', 'x', 'c', 'v', 'b', 'n', 'm', 'ö', 'ç', 'ä']
 ]
+
+// Сумісність зі старим API
+export const ORTHOGRAPHY_LETTERS = ORTHOGRAPHY

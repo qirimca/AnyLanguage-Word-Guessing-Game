@@ -1,7 +1,7 @@
 // src/hooks/useKeyboardHandler.ts
 
 import { useEffect, useCallback } from 'react'
-import { normalizeLetter } from '../constants/config'
+import { normalizeLetter } from '../utils/keyboardUtils'
 
 // 🗝️ Карта клавіш для кримськотатарської мови
 const CRIMEAN_TATAR_KEY_MAP: Record<string, string> = {

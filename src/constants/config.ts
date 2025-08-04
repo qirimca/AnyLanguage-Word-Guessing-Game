@@ -38,9 +38,30 @@ export const CONFIG = {
   
   // 🔧 КРИТИЧНО: Unicode нормалізація для кримськотатарської мови
   normalization: 'NFC' as const,
-  
+
   // 📏 Розміри гри
   wordLength: 5,
+
+  // 🗓️ Початкова дата гри
+  startDate: '2021-06-19',
+
+  // 🌐 Налаштування локалізації
+  defaultLang: 'crh',
+  language: 'Crimean Tatar',
+
+  // 👤 Інформація про автора
+  author: 'Unknown',
+  authorWebsite: 'https://example.com',
+
+  // 📚 Джерело словника
+  wordListSource: 'Unknown',
+  wordListSourceLink: 'https://example.com',
+
+  // 📈 Аналітика
+  googleAnalytics: '',
+
+  // 🔐 Додаткові налаштування
+  escapeSpecialCharacters: false,
   
   // ⚙️ Налаштування гри
   settings: {
@@ -67,21 +88,5 @@ export const CONFIG = {
     desktop: '1024px'
   }
 }
-
-// 🛠️ Функції для роботи з Unicode нормалізацією
-export const normalizeText = (text: string): string => {
-  return text.normalize(CONFIG.normalization)
-}
-
-// ✅ Функція для нормалізації введених літер
-export const normalizeLetter = (letter: string): string => {
-  return letter.normalize(CONFIG.normalization).toLowerCase()
-}
-
-// 🔍 Функція для порівняння літер з урахуванням нормалізації
-export const compareLetters = (letter1: string, letter2: string): boolean => {
-  return normalizeLetter(letter1) === normalizeLetter(letter2)
-}
-
 // 📋 Експорт для зручності
 export default CONFIG
