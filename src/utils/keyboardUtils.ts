@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 // Файл: src/utils/keyboardUtils.ts
 // Утилітарні функції для роботи з клавіатурою
 
@@ -34,15 +32,15 @@ export const sanitizeInput = (input: string): string => {
  */
 export const LETTER_VARIANTS: { [key: string]: string } = {
   // Варіанти для dotless i
-  'i̇': 'i',   // i з крапкою зверху
-  'ı': 'ı',   // dotless i
-  
+  'i̇': 'i', // i з крапкою зверху
+  'ı': 'ı',  // dotless i
+
   // Варіанти для інших літер з діакритиками
-  'g̃': 'ğ',   // альтернативне позначення ğ
-  'ñ': 'ñ',   // n з tilde
-  'ç': 'ç',   // c з cedilla
-  'ş': 'ş',   // s з cedilla
-  
+  'g̃': 'ğ', // альтернативне позначення ğ
+  'ñ': 'ñ', // n з tilde
+  'ç': 'ç', // c з cedilla
+  'ş': 'ş', // s з cedilla
+
   // Нормалізація подвійних діакритиків
   'üü': 'ü',
   'öö': 'ö',
@@ -54,61 +52,5 @@ export const LETTER_VARIANTS: { [key: string]: string } = {
 export const normalizeLetter = (letter: string): string => {
   const normalized = normalizeText(letter.toLowerCase())
   return LETTER_VARIANTS[normalized] || normalized
-=======
-
-// Файл: src/utils/keyboardUtils.ts
-// Утилітарні функції для роботи з клавіатурою
-
-import { ORTHOGRAPHY_LETTERS } from '../constants/orthography'
-
-/**
- * Нормалізує введений текст згідно з Unicode NFC
- */
-export const normalizeText = (text: string): string => {
-  return text.normalize('NFC')
 }
 
-/**
- * Перевіряє чи є символ допустимою кримськотатарською літерою
- */
-export const isValidCrimeanTatarLetter = (char: string): boolean => {
-  return ORTHOGRAPHY_LETTERS.includes(normalizeText(char.toLowerCase()))
-}
-
-/**
- * Конвертує введений текст у формат придатний для гри
- */
-export const sanitizeInput = (input: string): string => {
-  return normalizeText(input.toLowerCase())
-    .split('')
-    .filter(isValidCrimeanTatarLetter)
-    .join('')
-}
-
-/**
- * Мапінг між різними варіантами написання літер
- */
-export const LETTER_VARIANTS: { [key: string]: string } = {
-  // Варіанти для dotless i
-  'i̇': 'i',   // i з крапкою зверху
-  'ı': 'ı',   // dotless i
-  
-  // Варіанти для інших літер з діакритиками
-  'g̃': 'ğ',   // альтернативне позначення ğ
-  'ñ': 'ñ',   // n з tilde
-  'ç': 'ç',   // c з cedilla
-  'ş': 'ş',   // s з cedilla
-  
-  // Нормалізація подвійних діакритиків
-  'üü': 'ü',
-  'öö': 'ö',
-}
-
-/**
- * Нормалізує літеру до стандартного кримськотатарського алфавіту
- */
-export const normalizeLetter = (letter: string): string => {
-  const normalized = normalizeText(letter.toLowerCase())
-  return LETTER_VARIANTS[normalized] || normalized
->>>>>>> 9eeb79698fe0178a6507bc420c2c5b9ba0cdca9b
-}
