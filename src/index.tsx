@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { CONFIG } from './constants/config'
+import { loadGtm } from './utils/analytics'
+
+loadGtm(CONFIG.gtmId)
 
 ReactDOM.render(
   <React.StrictMode>
