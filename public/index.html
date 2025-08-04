@@ -1,41 +1,79 @@
 <!DOCTYPE html>
 <html lang="crh">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#52494B" />
-    
+
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-5R8847QH')
+    </script>
+    <!-- End Google Tag Manager -->
+
     <!-- Мета-теги для SEO -->
-    <meta name="description" content="Qırımtatar tilinde söz tapuv oyunı. Krime Tatar Word Guessing Game." />
-    <meta name="keywords" content="qırımtatar, crimean tatar, wordle, söz tapuv, word game, game, oyun" />
+    <meta
+      name="description"
+      content="Qırımtatar tilinde söz tapuv oyunı. Krime Tatar Word Guessing Game."
+    />
+    <meta
+      name="keywords"
+      content="qırımtatar, crimean tatar, wordle, söz tapuv, word game, game, oyun"
+    />
     <meta name="author" content="QIRI'M Young" />
-    
+
     <!-- Шрифти -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=e-Ukraine+Head:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=e-Ukraine+Head:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Іконки для мобільних пристроїв -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    
+
     <!-- PWA маніфест -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
+
     <title>Qırımtatar Söz Tapuv Oyunı</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5R8847QH"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <noscript>
-        <div style="text-align: center; padding: 2rem; font-family: 'e-Ukraine Head', sans-serif;">
-            <h1>JavaScript kerek!</h1>
-            <p>Bu oyun üçün JavaScript açmaq kerek.</p>
-            <p>You need to enable JavaScript to run this app.</p>
-        </div>
+      <div
+        style="
+          text-align: center;
+          padding: 2rem;
+          font-family: 'e-Ukraine Head', sans-serif;
+        "
+      >
+        <h1>JavaScript kerek!</h1>
+        <p>Bu oyun üçün JavaScript açmaq kerek.</p>
+        <p>You need to enable JavaScript to run this app.</p>
+      </div>
     </noscript>
-    
-    <div id="root"></div>
-</body>
 
+    <div id="root"></div>
+  </body>
 </html>
