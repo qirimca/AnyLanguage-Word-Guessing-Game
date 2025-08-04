@@ -23,7 +23,6 @@ const CRIMEAN_TATAR_KEY_MAPPING: { [key: string]: string } = {
   
   // Спеціальні кримськотатарські літери через Alt+клавіша
   'i': 'i',     // звичайна i
-  'I': 'ı',     // dotless i (Alt+I або Shift+i у деяких розкладках)
   
   // Комбінації клавіш для спеціальних символів
   // Alt+G для ğ, Alt+U для ü, тощо
@@ -52,7 +51,6 @@ const CRIMEAN_TATAR_KEY_MAPPING: { [key: string]: string } = {
   'Shift+Alt+o': 'ö',
   'Shift+Alt+c': 'ç',
   'Shift+Alt+a': 'ä',
-  'Shift+Alt+i': 'ı', // dotless i
 }
 
 // Альтернативні комбінації для dotless i
@@ -107,20 +105,27 @@ export const KeyboardHandler: React.FC<KeyboardHandlerProps> = ({
       }
       
       const keyCombo = getKeyCombo(event)
-      
+
       // Спеціальні клавіші
       if (event.code === 'Backspace') {
         event.preventDefault()
         onDelete()
         return
       }
-      
+
       if (event.code === 'Enter') {
         event.preventDefault()
         onEnter()
         return
       }
-      
+
+      // Перевіряємо комбінації для dotless i
+      if (DOTLESS_I_COMBINATIONS.includes(keyCombo)) {
+        event.preventDefault()
+        onChar('ı')
+        return
+      }
+
       // Перевіряємо комбінації для кримськотатарських літер
       if (CRIMEAN_TATAR_KEY_MAPPING[keyCombo]) {
         event.preventDefault()
@@ -133,14 +138,7 @@ export const KeyboardHandler: React.FC<KeyboardHandlerProps> = ({
       
       // Звичайні літери
       const letter = event.key.toLowerCase()
-      
-      // Спеціальна обробка для dotless i
-      if (letter === 'i' && (event.altKey || event.getModifierState('AltGraph'))) {
-        event.preventDefault()
-        onChar('ı') // dotless i
-        return
-      }
-      
+
       // Перевіряємо чи це допустима літера
       if (letter.length === 1 && letter >= 'a' && letter <= 'z') {
         if (isValidCrimeanTatarLetter(letter)) {
