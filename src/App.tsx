@@ -21,10 +21,6 @@ import ReactGA from 'react-ga'
 import '@bcgov/bc-sans/css/BCSans.css'
 import './i18n'
 import { withTranslation, WithTranslation } from 'react-i18next'
-// Додайте імпорти
-import { KeyboardHandler } from './components/KeyboardHandler'
-import { KeyboardInstructions } from './components/KeyboardInstructions'
-import { sanitizeInput, normalizeLetter } from './utils/keyboardUtils'
 
 const ALERT_TIME_MS = 2000
 

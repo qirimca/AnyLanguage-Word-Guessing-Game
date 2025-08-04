@@ -3,13 +3,30 @@
 export const CONFIG = {
   // 🔤 Кількість спроб
   tries: 6,
-  
-  // 📱 Локалізація
-  locale: 'crh',
-  
+
+  // 🏷️ Назва мови
+  language: 'Qırımtatarca',
+
   // 🌍 Доступні мови
   availableLangs: ['crh', 'en'],
-  
+
+  // 🌐 Мова за замовчуванням
+  defaultLang: 'crh',
+
+  // 📊 Google Analytics ID
+  googleAnalytics: 'GTM-5R8847QH',
+
+  // 👤 Автор
+  author: "QIRI'M Young",
+  authorWebsite: 'https://ctcorpus.org',
+
+  // 📚 Джерело списку слів
+  wordListSource: 'Qırımtatar Milliy Korpusu',
+  wordListSourceLink: 'https://ctcorpus.org',
+
+  // 🔐 Екранувати спецсимволи
+  escapeSpecialCharacters: true,
+
   // 🎨 Кольорова палітра для кримськотатарської Wordle
   colors: {
     // Основні кольори інтерфейсу
@@ -38,7 +55,10 @@ export const CONFIG = {
   
   // 🔧 КРИТИЧНО: Unicode нормалізація для кримськотатарської мови
   normalization: 'NFC' as const,
-  
+
+  // 🗓️ Дата початку гри
+  startDate: 'January 1, 2024 00:00:00',
+
   // 📏 Розміри гри
   wordLength: 5,
   
