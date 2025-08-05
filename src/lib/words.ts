@@ -11,7 +11,7 @@ export const isWinningWord = (word: string) => {
 }
 
 export const getWordOfDay = () => {
-  // January 1, 2022 Game Epoch
+  // Start date for daily puzzles
   const epochMs = new Date(CONFIG.startDate).valueOf()
   const now = Date.now()
   const msInDay = 86400000
