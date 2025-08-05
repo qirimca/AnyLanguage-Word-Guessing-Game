@@ -12,6 +12,8 @@ export const ORTHOGRAPHY = [
   'z', 'x', 'c', 'v', 'b', 'n', 'm', 'ö', 'ç', 'ä'
 ]
 
+export const ORTHOGRAPHY_LETTERS = ORTHOGRAPHY
+
 // Визначення рядків клавіатури для правильного відображення
 export const KEYBOARD_ROWS = [
   ['q', 'w', 'e', 'r', 't', 'y', 'u', 'ı', 'o', 'p', 'ğ', 'ü', 'ñ'],
