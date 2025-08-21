@@ -160,6 +160,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
+      <KeyboardInstructions />
       <Grid guesses={guesses} currentGuess={currentGuess} />
       <Keyboard
         onChar={onChar}
@@ -167,6 +168,7 @@ const App: React.FC<WithTranslation> = ({ t, i18n }) => {
         onEnter={onEnter}
         guesses={guesses}
       />
+      <KeyboardHandler onChar={onChar} onDelete={onDelete} onEnter={onEnter} />
       <TranslateModal
         isOpen={isI18nModalOpen}
         handleClose={() => setIsI18nModalOpen(false)}
